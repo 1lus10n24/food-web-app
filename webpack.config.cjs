@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // 1. Точка входа
@@ -32,6 +33,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html', // Взять этот файл как шаблон
     }),
+    new CopyPlugin({
+      patterns: [
+        {from: "img", to: "img"},
+        {from: "icons", to: "icons"}
+      ]
+    })
   ],
 
   // Режим работы (development для разработки, production для релиза)
