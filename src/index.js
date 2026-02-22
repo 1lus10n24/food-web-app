@@ -1,5 +1,6 @@
 import "./style.css"
-const deadline = "2025-11-10";
+const deadline = "2026-03-01";
+console.log("new feature");
 
 function getTimeRemaining(deadline) {
     let now = new Date;
