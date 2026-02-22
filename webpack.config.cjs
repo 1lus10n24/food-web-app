@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Путь к папке dist
     filename: 'bundle.js', // Имя итогового файла
     clean: true, // Очищать папку dist перед каждой сборкой
+    publicPath: "./"
   },
 
   // 3. Модули и Лоадеры
